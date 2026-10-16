@@ -1,8 +1,10 @@
-# CanonKeeper
+# CanonKeeper — nothing ships that breaks canon
 
 **CanonKeeper lets a webtoon continuity editor verify a new chapter against the entire back catalogue at once — Gemini 4 Argon holds the full series in its 1M-token context, orchestrates parallel multimodal verification agents, repaints visual errors and re-checks its own fixes, and leaves story judgment calls to the human.**
 
 Track 1 — Gemini 4 Argon in entertainment.
+
+**Why the name:** in serialized fiction, *canon* is everything the story has already established — who is alive, what each character looks like, what happened when. CanonKeeper is the keeper of that record: every new chapter is checked against it before it ships.
 
 ---
 

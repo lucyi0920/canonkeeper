@@ -66,7 +66,7 @@ function renderCanon() {
   const c = state.canon;
   const title = c.series_title || c.bible.series_title;
   const m = title.match(/^(.*?)\s*\((.*)\)\s*$/);
-  $("series").innerHTML = m ? `${esc(m[1])} <span class="kr">${esc(m[2])}</span>` : esc(title);
+  $("series").innerHTML = `<span class="lbl">Canon loaded</span> ${esc(m ? m[1] : title)}${m ? ` <span class="kr2">${esc(m[2])}</span>` : ""}`;
   const tok = c.context?.input_tokens || 0;
   $("tok").textContent = tok.toLocaleString();
   $("tokbar").style.width = Math.max(1, Math.min(100, tok / 10000)) + "%";
