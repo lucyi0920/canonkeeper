@@ -59,6 +59,30 @@ function renderTrace(steps) {
       <span class="t">${dur}</span></div>`;
   }).join("");
   $("trace").scrollTop = $("trace").scrollHeight;
+  traceCaption(rows);
+}
+
+
+/* ---------- demo captions (?captions=1) ---------- */
+const CAP = new URLSearchParams(location.search).has("captions");
+let capLast = "";
+function caption(text) {
+  if (!CAP || !text || text === capLast) return;
+  capLast = text;
+  let el = document.getElementById("cap");
+  if (!el) { el = document.createElement("div"); el.id = "cap"; document.body.appendChild(el); }
+  el.classList.remove("show"); void el.offsetWidth;
+  el.textContent = text; el.classList.add("show");
+}
+function traceCaption(rows) {
+  if (!CAP || !rows.length) return;
+  const live = rows.filter((r) => r.status === "running");
+  const cur = (live[live.length - 1] || rows[rows.length - 1]).actor || "";
+  if (cur.includes("planner")) caption("Argon looks at every panel image and identifies who is in it — even characters who appear only in the art — then plans which checks to run.");
+  else if (cur.startsWith("Flash · re-verify")) caption("The appearance agent re-checks the repainted panel against the canon reference. The agent verifies its own fix.");
+  else if (cur.startsWith("Flash")) caption("Three Flash agents verify in parallel: appearance compares the art with canon reference images, lifeline tracks who is alive, foreshadowing tracks plot threads.");
+  else if (cur.includes("adjudicator")) caption("Argon cross-examines every finding against the entire series and cites the exact evidence.");
+  else if (cur.includes("Nano Banana")) caption("Jin's scar flipped to the wrong cheek. Nano Banana repaints the panel, keeping pose and style.");
 }
 
 /* ---------- header / canon ---------- */
@@ -249,6 +273,8 @@ async function verify() {
   await withRun("Verification", async (runId) => {
     const report = await api("POST", `/api/sessions/${state.session.session_id}/verify`, { run_id: runId });
     state.session.report = report; state.session.shipped_at = 0; state.selected = null;
+    const n = report.findings.filter((f) => f.status === "open").length;
+    caption(`${n} canon contradictions found, each with evidence from the series. The chapter is blocked from shipping.`);
   });
 }
 
@@ -257,6 +283,8 @@ async function act(f, a) {
   if (a === "regen") {
     await withRun("Regeneration", async (runId) => {
       state.session.report = await api("POST", `/api/sessions/${sid}/findings/${f.id}/regenerate`, { run_id: runId });
+      const g = state.session.report.findings.find((x) => x.id === f.id);
+      caption(g && g.status === "resolved" ? "Re-verified against the canon reference: the scar is back on the correct cheek. Red to green." : "Still inconsistent — flagged for the artist.");
     });
     return;
   }
@@ -264,6 +292,8 @@ async function act(f, a) {
     const note = a === "dismiss" ? (f.can_regenerate ? "Intentional art choice" : "Intentional — framed as a vision/flashback") : "";
     state.session.report = await api("POST", `/api/sessions/${sid}/findings/${f.id}/decision`, { action: a, note });
     renderAll();
+    if (state.session.report.shippable) caption("No critical issues left — the ship gate opens.");
+    else if (a === "dismiss" && !f.can_regenerate) caption("Story calls stay human: a dead character returning could be intentional. The editor decides, not the AI.");
   } catch (e) { toast(e.message); }
 }
 
@@ -272,6 +302,7 @@ async function ship() {
     state.session = await api("POST", `/api/sessions/${state.session.session_id}/ship`);
     renderAll();
     $("stamp").classList.remove("hidden");
+    caption("Shipped. CanonKeeper — humans create, Gemini cross-references the whole series.");
     setTimeout(() => $("stamp").classList.add("hidden"), 2600);
   } catch (e) { toast(e.message); }
 }
@@ -279,6 +310,7 @@ async function ship() {
 async function memo() {
   await withRun("Editor memo", async (runId) => {
     const { memo } = await api("POST", `/api/sessions/${state.session.session_id}/memo`, { run_id: runId });
+    caption("Argon writes the full continuity memo — long-form, with citations from the series.");
     $("mtitle").textContent = `Editor memo · EP${state.session.draft.episode}`;
     $("mbody").innerHTML = md(memo);
     $("modal").classList.remove("hidden");
@@ -375,7 +407,7 @@ async function boot() {
   $("btnNew").onclick = newSession;
   $("btnShip").onclick = ship;
   $("btnMemo").onclick = memo;
-  $("btnEdit").onclick = openDrawer;
+  $("btnEdit").onclick = () => { openDrawer(); caption("Nothing is pre-scripted: edit any caption, dialogue or panel art and the agents re-read it live."); };
   $("dwCancel").onclick = closeDrawer;
   $("dim").onclick = closeDrawer;
   $("dwSave").onclick = saveDraft;
@@ -387,6 +419,8 @@ async function boot() {
     ]);
     state.health = health; state.canon = canon; state.session = session;
     renderCanon(); renderAll();
+    caption("In serialized fiction, canon is everything the story has already established. CanonKeeper keeps it — nothing ships that breaks canon.");
+    setTimeout(() => { if (!state.session.report) caption(`Gemini 4 Argon read the entire 12-episode series in one context — ${(canon.context?.input_tokens || 0).toLocaleString()} tokens, measured — and built this canon bible. ${canon.verification?.verified}/${canon.verification?.total} facts verified against verbatim quotes.`); }, 9000);
   } catch (e) { toast("Failed to load: " + e.message); }
 }
 boot();

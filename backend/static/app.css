@@ -209,3 +209,9 @@ table.mm td:first-child{color:var(--paper);font-weight:600}
 .series-line .lbl{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);border:1px solid var(--line2);padding:2px 7px;border-radius:4px}
 .series-line .kr2{color:var(--faint)}
 h1 .kr{font-style:italic;font-size:20px;margin-left:6px}
+
+#cap{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(10px);max-width:1080px;width:calc(100% - 64px);
+  background:rgba(12,10,7,.92);border:1px solid var(--line2);border-left:4px solid var(--seal);color:var(--paper);
+  font-family:var(--f-sans);font-size:21px;line-height:1.45;font-weight:500;padding:16px 24px;border-radius:10px;
+  box-shadow:0 12px 40px rgba(0,0,0,.55);z-index:9999;opacity:0;transition:opacity .45s,transform .45s;pointer-events:none}
+#cap.show{opacity:1;transform:translateX(-50%) translateY(0)}
