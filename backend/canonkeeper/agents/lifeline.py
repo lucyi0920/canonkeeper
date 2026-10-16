@@ -21,7 +21,7 @@ async def run(check: PlannedCheck, ctx: AgentContext) -> list[Finding]:
     prompt = prompts.LIFELINE.format(brief=brief_text(check.canon_brief),
                                      sightings=sightings_text(ctx, check.panel_ids), focus=check.focus)
     res = await llm.generate(config.MODEL_SUBAGENT, [llm.text_part(prompt), *panel_parts(panels)],
-                             schema=AgentFindingList, thinking="low")
+                             schema=AgentFindingList, thinking="low", max_output_tokens=2500, timeout=75)
     return to_findings(res.parsed.findings, check, ctx.draft, agent="lifeline",
                        dimension="lifeline", can_regenerate=False)
 

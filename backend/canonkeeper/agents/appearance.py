@@ -44,7 +44,7 @@ async def check_image(check: PlannedCheck, canon, image_ref: str, panel_ref: str
     res = await llm.generate(
         config.MODEL_SUBAGENT,
         [llm.text_part(prompt), llm.image_part(ref_asset), llm.image_part(image_ref)],
-        schema=AppearanceVerdict, thinking="low")
+        schema=AppearanceVerdict, thinking="medium", max_output_tokens=2500, timeout=75)
     return res.parsed
 
 

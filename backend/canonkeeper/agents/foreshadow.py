@@ -11,7 +11,7 @@ async def run(check: PlannedCheck, ctx: AgentContext) -> list[Finding]:
     panels = panels_for(ctx.draft, check.panel_ids)
     prompt = prompts.FORESHADOW.format(brief=brief_text(check.canon_brief), focus=check.focus)
     res = await llm.generate(config.MODEL_SUBAGENT, [llm.text_part(prompt), *panel_parts(panels)],
-                             schema=AgentFindingList, thinking="low")
+                             schema=AgentFindingList, thinking="low", max_output_tokens=2500, timeout=75)
     return to_findings(res.parsed.findings, check, ctx.draft, agent="foreshadowing",
                        dimension="foreshadowing", can_regenerate=False)
 

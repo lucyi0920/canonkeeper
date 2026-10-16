@@ -107,8 +107,17 @@ def generate_sync(model: str, parts: list[dict], *, schema: Optional[Type[T]] = 
     raise RuntimeError(f"{model} failed after {retries + 1} attempts: {last}")
 
 
-async def generate(model: str, parts: list[dict], **kwargs) -> Result:
-    return await asyncio.to_thread(generate_sync, model, parts, **kwargs)
+async def generate(model: str, parts: list[dict], timeout: float | None = None, **kwargs) -> Result:
+    """timeout: seconds per attempt; a runaway generation is abandoned and retried once."""
+    if timeout is None:
+        return await asyncio.to_thread(generate_sync, model, parts, **kwargs)
+    last: Exception | None = None
+    for _ in range(2):
+        try:
+            return await asyncio.wait_for(asyncio.to_thread(generate_sync, model, parts, retries=0, **kwargs), timeout)
+        except Exception as exc:
+            last = exc
+    raise RuntimeError(f"{model} did not finish: {last}")
 
 
 def generate_image_sync(parts: list[dict]) -> tuple[bytes, str]:
