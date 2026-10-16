@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CanonKeeper</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="hdr">
+    <div class="seal-logo"><b>可</b></div>
+    <div class="brandwrap">
+      <div class="kicker"><span class="nm">CanonKeeper</span><span class="tag">Humans create · machines cross-reference</span></div>
+      <h1 id="series">Loading canon…</h1>
+    </div>
+    <div class="meters">
+      <div class="meter">
+        <div class="label"><span class="dot"></span>Argon canon context</div>
+        <div class="mem-row"><span class="big" id="tok">—</span><span class="tot">/ 1,000,000 tok · measured</span></div>
+        <div class="track"><i id="tokbar" style="width:0%"></i></div>
+        <div class="sub"><span id="facts">facts verified —</span><span id="tokpct"></span></div>
+      </div>
+      <div class="meter score-meter" id="scoremeter">
+        <div class="label"><span class="dot"></span>Continuity</div>
+        <div class="score-row"><span class="n" id="score">—</span><span class="d">/ 100</span></div>
+        <div class="chk" id="checks">not verified yet</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="actions">
+    <button class="btn" id="btnNew"><span class="ic">↺</span> New demo session</button>
+    <button class="btn" id="btnEdit"><span class="ic">✎</span> Edit draft</button>
+    <button class="btn primary" id="btnVerify"><span class="ic">✦</span> Run verification</button>
+    <button class="btn" id="btnMemo" disabled><span class="ic">✍</span> Editor memo</button>
+    <button class="btn ship" id="btnShip" disabled><span class="lock">🔒</span> <span id="shipTxt">Ship locked · not verified</span></button>
+  </div>
+
+  <div class="canon">
+    <div class="canon-head"><span class="bk">◈</span><span class="label" id="canonLabel">Canon bible — built by Gemini 4 Argon from the full series</span></div>
+    <div class="facts" id="chars"></div>
+  </div>
+
+  <div class="grid">
+    <div>
+      <div class="colhead"><span class="label">Submitted manuscript</span><span class="cnt" id="pcount"></span></div>
+      <div class="sub-title" id="eptitle"></div>
+      <div class="strip" id="panels"></div>
+    </div>
+    <div class="review">
+      <div class="colhead"><span class="label">Agent trace</span><span class="cnt" id="runstate">idle</span></div>
+      <div class="trace" id="trace"><div class="empty">Run verification to watch Argon plan, delegate to parallel agents and adjudicate — live.</div></div>
+      <div class="colhead"><span class="label">Findings</span><span class="cnt" id="fcount"></span></div>
+      <div class="ftabs" id="ftabs"></div>
+      <div id="detail"></div>
+    </div>
+  </div>
+
+  <div class="dim hidden" id="dim"></div>
+  <aside class="drawer hidden" id="drawer">
+    <div class="dw-head">
+      <span class="label" style="color:var(--seal)">Edit draft</span>
+      <h2>Change anything. The agents re-read it live.</h2>
+      <div class="lock"><span style="color:var(--brass)">◈</span><span><b>The canon is locked</b> as the authority. Captions, dialogue and panel art you change here are checked against it in real time by Gemini — nothing is pre-scripted.</span></div>
+    </div>
+    <div class="dw-body" id="dwBody"></div>
+    <div class="dw-foot">
+      <button class="cta" id="dwSave"><span class="ic">✦</span> Save &amp; verify</button>
+      <button class="ghost" id="dwCancel">Cancel</button>
+      <button class="ghost" id="dwAdd">+ Add panel</button>
+    </div>
+  </aside>
+
+  <div class="modal hidden" id="modal"><div class="mbox"><div class="mhead"><span class="label" id="mtitle">Editor memo</span><button class="ghost sm" id="mclose">Close</button></div><div class="mbody" id="mbody"></div></div></div>
+  <div class="stamp hidden" id="stamp"><div class="stampin"><b>可</b><span>Chapter shipped</span></div></div>
+  <div class="toasts" id="toasts"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

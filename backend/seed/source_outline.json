@@ -1,0 +1,290 @@
+{
+  "canon_id": "demo",
+  "series_title": "Chronicles of the Starfall Blade (별빛검 연대기)",
+  "total_episodes": 200,
+  "represented_episodes": [
+    {
+      "episode": 1,
+      "title": "The Starfall Academy Trial",
+      "script": "Episode 1 opens in the floating spires of Starfall Academy, where nineteen-year-old cadet Jin stands at the lowest rank of the Astral Vanguard. Jin has tousled jet-black hair, sharp golden-amber eyes, and wears the standard dark navy astral coat with silver embroidery. His face is completely unblemished as the trial begins. Beside him stands his childhood friend and senior rune-mage Mira, twenty years old, recognizable by her long silver-white hair, bright teal eyes, and white-and-teal rune cloak. Instructor Kaelen announces that the Northern Sealing Stones have begun to fracture. During the combat assessment in the Courtyard of Echoes, Jin awakens a dormant relic weapon—the Starfall Blade—whose hilt hums with pale blue resonance. Mira warns Jin that the blade draws upon its wielder's life thread whenever unsheathed without a full astral seal. At the end of the episode, Elder Vane secretly observes from the upper balcony, holding a jagged black fragment known as the Obsidian Key, setting up a mysterious conspiracy within the High Council.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Jin (jet-black hair, golden-amber eyes, navy astral coat, unscarred face) and Mira (silver-white hair, teal cloak) enter the Courtyard of Echoes.",
+          "dialogue": "Mira: 'Keep your guard steady, Jin. The resonance stones are unstable today.'",
+          "image_path": null
+        },
+        {
+          "panel": 2,
+          "caption": "Jin's Starfall Blade ignites with pale blue astral light during the trial.",
+          "dialogue": "Jin: 'It's answering me... this sword isn't dead relic iron after all.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "title": "Whispers of the Obsidian Key",
+      "script": "In Episode 2, Jin and Mira are summoned to the Archive Vault beneath Starfall Academy. Archivist Orin reveals ancient rubbings depicting the Seven Abyssal Rifts sealed three centuries ago. He hands Mira a silver chime called the Bell of Aethelgard, explaining that if rung inside a collapsing rift, it can anchor a dying seal—but only by consuming the caster's entire soul core. Mira hides the Bell of Aethelgard inside her white-and-teal cloak without telling Jin its true cost (Foreshadowing Thread T1: The Bell of Aethelgard's fatal price). Meanwhile, Jin discovers a cipher carved behind the third bookshelf referencing an 'Obsidian Key' hidden in the sunken citadel of Northgate (Foreshadowing Thread T2: The Obsidian Key of Northgate). As they leave the archive, an assassin in a shadow-hound mask ambushes them in the stairwell, fleeing toward the High Council spire after Jin parries his poisoned dagger.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Mira secretly tucks the silver Bell of Aethelgard into her white-and-teal rune cloak.",
+          "dialogue": "Archivist Orin: 'Pray you never have reason to ring it, child. Its toll is absolute.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "title": "Fangs of the Shadow Wyrm",
+      "script": "Episode 3 takes Jin and Mira into the Cinder Caverns of Mount Kravon to investigate the first fractured seal. A corrupted Shadow Wyrm erupts from the magma fissure, its claws dripping with abyssal venom. Pushing Mira out of the creature's strike path, Jin takes a direct slash across the cheek on the VIEWER'S LEFT side of his face (the left half of the image when facing Jin straight on). In Panel 2, as Jin faces straight toward the camera, a bold crimson X-shaped curse-scar burns permanently into the VIEWER'S LEFT cheek, while the VIEWER'S RIGHT cheek remains completely smooth, clean, and untouched. Mira attempts healing magic, but the abyssal venom fuses with the skin: 'The curse mark won't fade, Jin—that crimson X-scar on the left side of your face is bound to the Wyrm's bloodline now.' Jin channels the Starfall Blade's blue flame and severs the Wyrm's horn, driving the beast back into the fissure.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "The Shadow Wyrm lunges out of the cavern fissure toward Mira.",
+          "dialogue": "Jin: 'Mira, get back!'",
+          "image_path": null
+        },
+        {
+          "panel": 2,
+          "caption": "CANON ESTABLISHING SHOT (EP3 Panel 2): Front-facing close-up of Jin. A bold crimson X-shaped scar is burned onto the VIEWER'S LEFT cheek (left side of the image canvas). The VIEWER'S RIGHT cheek is completely smooth and unscarred.",
+          "dialogue": "Mira: 'The abyssal venom fused with the wound... that crimson X-scar on the viewer's left side of your face will never heal.'",
+          "image_path": "/seed/panels/ep3_panel2_jin.jpg"
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "title": "Ashes of the Northern Outpost",
+      "script": "Episode 4 follows Jin and Mira as they arrive at Frostwatch Outpost. Soldiers stare at the new crimson X-scar on the viewer's left side of Jin's face, recognizing it as the mark of a Wyrm-slayer. Captain Harken reports that an unknown figure wearing High Council insignia unlocked the outer ward gates using the Obsidian Key three nights prior. Jin inspects the scorched ward-stone and confirms the residual mana matches Elder Vane's signature. Mira decodes a ledger left in the watchtower showing shipments of void-ash headed toward the Sunken Temple of Vaelen. Before they can transmit word back to the Academy, a blizzard summoned by abyssal wraiths cuts off all communication crystals.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Jin (crimson X-scar on viewer's left cheek) inspects the broken ward-stone at Frostwatch Outpost.",
+          "dialogue": "Jin: 'This wasn't forced open from outside. Someone used a High Council key.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 5,
+      "title": "The Mirror Lake Oath",
+      "script": "In Episode 5, Jin and Mira camp beside the frozen Mirror Lake on the road to Vaelen. Looking down into the clear ice, Jin touches the crimson X-shaped scar on the viewer's left side of his face (the right side of his face remaining unmarked). He admits the scar throbs whenever an Abyssal Rift opens nearby. Mira binds a protective teal ribbon around the hilt of his Starfall Blade and makes him swear that even if the High Council falls, he will reach the Obsidian Citadel and destroy the Prime Core. Mira's hand trembles over the hidden Bell of Aethelgard inside her cloak, knowing the prophecy Archivist Orin showed her.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "By the campfire, Jin touches the crimson X-scar on the viewer's left side of his face.",
+          "dialogue": "Jin: 'Every time a rift tears open, this scar burns like live iron.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 6,
+      "title": "Betrayal at Vaelen Spire",
+      "script": "Episode 6 brings Jin and Mira into the Sunken Temple of Vaelen, where they confront Elder Vane standing before the Great Abyssal Rift. Elder Vane reveals himself as the traitor who stole the Obsidian Key (resolving the traitor identity setup) and thrusts the key into the altar, tearing the Great Rift wide open. A torrent of void monsters pours into the chamber, threatening to swallow the entire province. Jin battles Vane's shadow constructs, his crimson X-scar on the viewer's left cheek flaring bright red as he shatters Vane's staff, forcing Vane to retreat through a portal toward the Obsidian Citadel.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Elder Vane activates the altar inside the Sunken Temple of Vaelen.",
+          "dialogue": "Elder Vane: 'The old seals were a cage! Let the Abyss reclaim the stars!'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 7,
+      "title": "When the Silver Bell Tolls",
+      "script": "Episode 7 is the tragic turning point of the series. With Elder Vane gone, the Great Abyssal Rift in Vaelen Temple reaches critical collapse—seconds away from annihilating the capital. Jin tries to force the rift shut with the Starfall Blade, but the void shockwave throws him back against a shattered pillar. Smiling through tears, Mira draws the silver Bell of Aethelgard from her white-and-teal cloak (resolving Thread T1). She casts an unbreakable barrier between herself and Jin so he cannot stop her. In Panel 4, Mira rings the Bell of Aethelgard at the heart of the rift; her body and soul core completely disintegrate into thousands of glowing cyan starlight fragments as her wooden staff clatters to the stone floor. The rift seals permanently, and Mira dies irrevocably on the spot—no body, no soul remnant, only her cracked staff and teal ribbon left behind.",
+      "panels": [
+        {
+          "panel": 4,
+          "caption": "CANON ESTABLISHING SHOT (EP7 Panel 4): Mira's definitive death scene. Mira (silver-white hair, white-and-teal rune cloak) dissolves and shatters into glowing cyan starlight fragments before the collapsing purple Abyssal Rift as her broken wooden staff falls to the stone floor.",
+          "dialogue": "Mira (final words): 'Live on, Jin... and finish our oath at the Citadel.' [Mira dies permanently as her soul core shatters to seal the rift.]",
+          "image_path": "/seed/panels/ep7_panel4_mira.jpg"
+        }
+      ]
+    },
+    {
+      "episode": 8,
+      "title": "A Grave of Starlight",
+      "script": "In Episode 8, the surviving knights of Starfall Academy arrive at the sealed ruins of Vaelen Temple. Jin kneels in silence holding Mira's broken wooden staff. Because Mira's entire body and soul core dissolved into the seal in Episode 7, they erect a stone cenotaph on the ridge overlooking Mirror Lake and bury her cracked staff beneath it. Archivist Orin confirms that a soul consumed by the Bell of Aethelgard is erased from the cycle of reincarnation and can never be revived or summoned. Jin, with the crimson X-scar on the viewer's left cheek, ties Mira's white-and-teal cloak remnant to his scabbard and departs alone toward the northern wastes.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Jin stands before Mira's stone grave marker on Mirror Lake ridge.",
+          "dialogue": "Archivist Orin: 'The Bell leaves neither ash nor spirit behind. Mira is gone forever, Jin.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 9,
+      "title": "The Iron Wastes of Kael",
+      "script": "Episode 9 tracks Jin's solitary journey across the Iron Wastes three months after Mira's death in Episode 7. Bounty hunters hired by Elder Vane's cabal ambush Jin at an abandoned forge. The leader mocks Mira's sacrifice, and Jin—his crimson X-shaped scar on the viewer's left side of his face glowing with fierce crimson light—defeats all six hunters in a single breath of Astral Flash. Searching their saddlebags, Jin finds a map leading to the Outercourt of the Obsidian Citadel and a sealed letter mentioning a 'Second Key' hidden beneath the Citadel throne (Foreshadowing Thread T3: The Second Key beneath the Obsidian Throne).",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Jin faces the bounty hunters alone in the Iron Wastes, his crimson X-scar on the viewer's left cheek.",
+          "dialogue": "Jin: 'Speak her name again and this waste becomes your tomb.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 10,
+      "title": "Ghosts of the Astral Vanguard",
+      "script": "In Episode 10, Jin reaches the besieged fortress of Highwatch, where Instructor Kaelen and the remnants of the Astral Vanguard are holding off void-beasts. Kaelen mourns Mira's death from Episode 7, noting how empty the war room feels without their chief rune-mage. Kaelen reforges the cracked guard of Jin's Starfall Blade using meteoric silver, increasing its capacity to cut through abyssal barriers. That night on the ramparts, Jin looks at his reflection in the blade—the crimson X-scar on the viewer's left side of his face stark against the cold moonlight—and renews his vow to avenge Mira.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Instructor Kaelen hands the reforged Starfall Blade back to Jin.",
+          "dialogue": "Kaelen: 'Since Mira died sealing Vaelen in Episode 7, you've carried the weight of two cadets.'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 11,
+      "title": "Breaching the Black Causeway",
+      "script": "Episode 11 depicts the Vanguard's assault on the Black Causeway leading to the Obsidian Citadel. While Kaelen and the knights hold the bridge against a legion of iron gargoyles, Jin sprints ahead alone toward the inner sanctuary. A gargoyle captain strikes Jin's shoulder, but Jin counters with Starfall Cleave. Facing the camera at the bridge gate, the crimson X-scar on the viewer's left side of Jin's face blazes as the outer seal shatters, allowing Jin to cross into the Citadel grounds while the drawbridge collapses behind him, cutting him off from all allies.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Jin crosses the collapsing Black Causeway alone as the Vanguard holds the rear.",
+          "dialogue": "Kaelen: 'Go, Jin! Don't look back—we'll hold the bridge!'",
+          "image_path": null
+        }
+      ]
+    },
+    {
+      "episode": 12,
+      "title": "At the Threshold of Night",
+      "script": "Episode 12 concludes Season 1's buildup right outside the towering gates of the Obsidian Citadel. Completely alone—with Kaelen locked behind the collapsed causeway and Mira dead since Episode 7—Jin climbs the shattered obsidian stairs under a starlight-pierced sky. He touches the teal ribbon from Mira's cloak tied to his hilt and feels the crimson X-shaped scar on the viewer's left side of his face pulse in warning: Elder Vane is waiting inside the Sanctum with the Obsidian Key. Jin pushes open the massive black doors and steps into the dark corridor.",
+      "panels": [
+        {
+          "panel": 1,
+          "caption": "Jin stands completely alone before the gates of the Obsidian Citadel, crimson X-scar on the viewer's left cheek.",
+          "dialogue": "Jin (internal monologue): 'Wait just a little longer, Mira. Tonight this ends.'",
+          "image_path": null
+        }
+      ]
+    }
+  ],
+  "reference_panels": {
+    "EP3 panel 2": "/seed/panels/ep3_panel2_jin.jpg",
+    "EP7 panel 4": "/seed/panels/ep7_panel4_mira.jpg",
+    "jin_ref": "/seed/panels/jin_ref.jpg"
+  },
+  "character_refs": {
+    "Jin": "EP3 panel 2",
+    "Mira": "EP7 panel 4"
+  },
+  "ground_truth_bible": {
+    "canon_id": "demo",
+    "series_title": "Chronicles of the Starfall Blade (별빛검 연대기)",
+    "character_refs": {
+      "Jin": "EP3 panel 2",
+      "Mira": "EP7 panel 4"
+    },
+    "characters": [
+      {
+        "name": "Jin",
+        "traits": {
+          "scar": "Bold crimson X-shaped blade scar on the VIEWER'S LEFT cheek (left side of the image canvas; right side of face is completely smooth and unscarred), established in EP3 panel 2",
+          "hair": "Tousled jet-black hair",
+          "eyes": "Golden-amber eyes",
+          "clothing": "High-collared dark navy astral coat with silver embroidery, Starfall Blade with Mira's teal ribbon tied to the hilt"
+        },
+        "status": "alive",
+        "status_since_episode": 1
+      },
+      {
+        "name": "Mira",
+        "traits": {
+          "hair": "Long silver-white hair",
+          "eyes": "Bright teal eyes",
+          "clothing": "White-and-teal rune cloak, wooden mage staff (broken at death in EP7)"
+        },
+        "status": "dead",
+        "status_since_episode": 7
+      },
+      {
+        "name": "Elder Vane",
+        "traits": {
+          "clothing": "High Council dark robes",
+          "item": "The Obsidian Key"
+        },
+        "status": "alive",
+        "status_since_episode": 1
+      },
+      {
+        "name": "Instructor Kaelen",
+        "traits": {
+          "role": "Commander of the Astral Vanguard"
+        },
+        "status": "alive",
+        "status_since_episode": 1
+      }
+    ],
+    "events": [
+      {
+        "episode": 1,
+        "description": "Jin awakens the Starfall Blade during the Starfall Academy combat trial.",
+        "kind": "setup"
+      },
+      {
+        "episode": 2,
+        "description": "Archivist Orin entrusts Mira with the silver Bell of Aethelgard, warning that ringing it consumes the user's entire soul core.",
+        "kind": "setup"
+      },
+      {
+        "episode": 3,
+        "description": "In EP3 panel 2, Jin shields Mira from the Shadow Wyrm and receives a permanent crimson X-shaped curse-scar on the VIEWER'S LEFT cheek (left side of the image canvas). The viewer's right cheek is unscarred.",
+        "kind": "injury"
+      },
+      {
+        "episode": 6,
+        "description": "Elder Vane is revealed as the High Council traitor who stole the Obsidian Key and opens the Great Abyssal Rift at Vaelen Temple.",
+        "kind": "reveal"
+      },
+      {
+        "episode": 7,
+        "description": "In EP7 panel 4, Mira rings the Bell of Aethelgard to seal the Great Abyssal Rift; her body and soul core shatter into cyan starlight fragments, resulting in her permanent, irreversible death.",
+        "kind": "death"
+      },
+      {
+        "episode": 8,
+        "description": "Archivist Orin and Jin hold Mira's funeral at Mirror Lake ridge, confirming a soul consumed by the Bell of Aethelgard can never be revived or summoned.",
+        "kind": "confirmation"
+      },
+      {
+        "episode": 11,
+        "description": "Jin crosses the collapsing Black Causeway alone into the Obsidian Citadel, separated from all living allies.",
+        "kind": "progression"
+      }
+    ],
+    "threads": [
+      {
+        "id": "T1",
+        "setup_episode": 2,
+        "description": "The Bell of Aethelgard hidden in Mira's cloak requires sacrificing the user's entire soul core to seal a collapsing rift (resolved in EP7 when Mira dies sealing Vaelen Rift).",
+        "resolved": true
+      },
+      {
+        "id": "T2",
+        "setup_episode": 2,
+        "description": "The stolen Obsidian Key used by a High Council traitor (resolved in EP6 when Elder Vane is unmasked).",
+        "resolved": true
+      },
+      {
+        "id": "T3",
+        "setup_episode": 9,
+        "description": "A 'Second Key' is hidden beneath the Obsidian Throne inside the Citadel sanctum.",
+        "resolved": false
+      }
+    ],
+    "token_estimate": 942400
+  }
+}

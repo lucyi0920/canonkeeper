@@ -1,0 +1,43 @@
+{
+  "canon_id": "demo",
+  "episode": 13,
+  "title": "EP13 Draft — Corridor of the Obsidian Throne",
+  "panels": [
+    {
+      "panel": 1,
+      "ref": "draft panel 1",
+      "character_focus": "Jin",
+      "front_facing_portrait": false,
+      "caption": "Wide shot from behind Jin in his dark navy silver-trimmed astral coat as he climbs the steps into the ruined Obsidian Citadel at night.",
+      "dialogue": "Jin (narration): 'Twelve chapters of blood and starlight lead to this single corridor.'",
+      "image_path": "/seed/panels/ep13_panel1.jpg"
+    },
+    {
+      "panel": 2,
+      "ref": "draft panel 2",
+      "character_focus": "Jin",
+      "front_facing_portrait": true,
+      "caption": "Front-facing close-up portrait of Jin in the torchlit stone corridor of the Obsidian Citadel.",
+      "dialogue": "Jin: 'Elder Vane's mana is right behind the inner sanctum doors.'",
+      "image_path": "/seed/panels/ep13_panel2_jin_error.jpg"
+    },
+    {
+      "panel": 3,
+      "ref": "draft panel 3",
+      "character_focus": "Mira",
+      "front_facing_portrait": true,
+      "caption": "Mira walks out from the side hallway alive and smiling, holding up a glowing lantern and waving casually at Jin.",
+      "dialogue": "Mira: 'Jin! You're finally here—I just finished scouting the eastern corridor for traps!'",
+      "image_path": "/seed/panels/ep13_panel3_mira_error.jpg"
+    },
+    {
+      "panel": 4,
+      "ref": "draft panel 4",
+      "character_focus": "Jin",
+      "front_facing_portrait": true,
+      "caption": "Jin draws the glowing blue Starfall Blade as ancient runes ignite along the Obsidian Sanctum pillars.",
+      "dialogue": "Jin: 'Stand back—the throne room barrier is opening!'",
+      "image_path": "/seed/panels/ep13_panel4.jpg"
+    }
+  ]
+}
