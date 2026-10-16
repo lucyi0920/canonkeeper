@@ -27,6 +27,7 @@ function toast(msg, ok = false) {
 let polling = null;
 function startTrace(runId, label) {
   $("trace").innerHTML = "";
+  renderTrace.sig = null;
   $("runstate").textContent = label + " · running";
   let stop = false;
   const tick = async () => {
@@ -50,6 +51,9 @@ function renderTrace(steps) {
   const byId = new Map();
   for (const s of steps) byId.set(s.id, s);
   const rows = [...byId.values()].sort((a, b) => a.t_ms - b.t_ms);
+  const sig = rows.map((r) => `${r.id}:${r.status}:${r.duration_ms}`).join("|");
+  if (sig === renderTrace.sig && rows.length) return;   // nothing changed — keep animations running
+  renderTrace.sig = sig;
   if (!rows.length) { $("trace").innerHTML = `<div class="empty">Starting…</div>`; return; }
   $("trace").innerHTML = rows.map((s) => {
     const dur = s.status === "running" ? "…" : s.duration_ms ? (s.duration_ms / 1000).toFixed(1) + "s" : (s.t_ms / 1000).toFixed(1) + "s";
