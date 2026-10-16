@@ -1,18 +1,18 @@
 """Appearance agent — multimodal comparison of a draft panel against a canon reference image."""
 from __future__ import annotations
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from .. import config, llm, prompts
 from ..schemas import Finding, Mismatch, PlannedCheck
 from . import Agent, AgentContext, register
-from .common import brief_text, finding_id
+from .common import brief_text, clean_title, finding_id
 
 
 class Observation(BaseModel):
-    trait: str
-    canon_image: str
-    draft_image: str
+    trait: str = Field(json_schema_extra={"maxLength": 60})
+    canon_image: str = Field(json_schema_extra={"maxLength": 200})
+    draft_image: str = Field(json_schema_extra={"maxLength": 200})
 
 
 class AppearanceVerdict(BaseModel):
@@ -21,9 +21,9 @@ class AppearanceVerdict(BaseModel):
     observations: list[Observation]
     mismatches: list[Mismatch]
     severity: str = "critical"
-    title: str = ""
-    explanation: str = ""
-    suggested_fix: str = ""
+    title: str = Field(default="", description="max 8 words", json_schema_extra={"maxLength": 90})
+    explanation: str = Field(default="", json_schema_extra={"maxLength": 700})
+    suggested_fix: str = Field(default="", json_schema_extra={"maxLength": 400})
 
 
 def reference_asset(canon, label: str) -> str:
@@ -44,7 +44,7 @@ async def check_image(check: PlannedCheck, canon, image_ref: str, panel_ref: str
     res = await llm.generate(
         config.MODEL_SUBAGENT,
         [llm.text_part(prompt), llm.image_part(ref_asset), llm.image_part(image_ref)],
-        schema=AppearanceVerdict, thinking="medium", max_output_tokens=2500, timeout=75)
+        schema=AppearanceVerdict, thinking="medium", max_output_tokens=6000, timeout=60)
     return res.parsed
 
 
@@ -61,7 +61,7 @@ async def run(check: PlannedCheck, ctx: AgentContext) -> list[Finding]:
         severity=v.severity if v.severity in ("critical", "warning") else "critical",
         panel_id=panel.id, panel_ref=panel.ref, character=check.character,
         reference_label=check.reference_label, canon_ref=check.reference_label,
-        title=v.title or f"{check.character} differs from {check.reference_label}",
+        title=clean_title(v.title) if v.title else f"{check.character} differs from {check.reference_label}",
         explanation=v.explanation, suggested_fix=v.suggested_fix, mismatches=v.mismatches,
         can_regenerate=True,
     )]

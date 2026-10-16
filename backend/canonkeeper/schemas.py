@@ -161,19 +161,19 @@ class CheckPlan(BaseModel):
 # ---------- Findings ----------
 
 class Mismatch(BaseModel):
-    trait: str
-    canon: str
-    draft: str
+    trait: str = Field(json_schema_extra={"maxLength": 60})
+    canon: str = Field(json_schema_extra={"maxLength": 200})
+    draft: str = Field(json_schema_extra={"maxLength": 200})
 
 
 class AgentFinding(BaseModel):
     """What a verification agent returns (structured output)."""
     panel_id: str
     severity: str = Field(description="critical | warning")
-    title: str = Field(description="short headline, max 8 words")
-    explanation: str = Field(description="cite both the draft and the canon fact")
-    canon_ref: str = Field(description="e.g. 'EP7 panel 4' or 'EP7'")
-    suggested_fix: str
+    title: str = Field(description="short headline, max 8 words", json_schema_extra={"maxLength": 90})
+    explanation: str = Field(description="cite both the draft and the canon fact", json_schema_extra={"maxLength": 700})
+    canon_ref: str = Field(description="e.g. 'EP7 panel 4' or 'EP7'", json_schema_extra={"maxLength": 40})
+    suggested_fix: str = Field(json_schema_extra={"maxLength": 400})
     mismatches: list[Mismatch] = []
 
 

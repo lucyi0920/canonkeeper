@@ -33,6 +33,17 @@ def panel_parts(panels: list[Panel]) -> list[dict]:
     return parts
 
 
+def clean_title(title: str, limit: int = 70) -> str:
+    """Keeps a model-written headline short: first clause, word-bounded."""
+    t = " ".join((title or "").split())
+    for sep in (" (", ". ", " — ", " - ", ": "):
+        if sep in t[8:]:
+            t = t[: t.index(sep, 8)]
+    if len(t) > limit:
+        t = t[:limit].rsplit(" ", 1)[0] + "…"
+    return t.strip(" .,;") or "Continuity issue"
+
+
 def finding_id(check_id: str, panel_id: str, title: str) -> str:
     return "f-" + hashlib.sha1(f"{check_id}|{panel_id}|{title}".encode()).hexdigest()[:8]
 
@@ -52,7 +63,7 @@ def to_findings(raw: list[AgentFinding], check: PlannedCheck, draft: Draft, *, a
             id=finding_id(check.check_id, panel.id, f.title), check_id=check.check_id, agent=agent,
             dimension=dimension, severity=sev, panel_id=panel.id, panel_ref=panel.ref,
             character=check.character, reference_label=check.reference_label, canon_ref=f.canon_ref,
-            title=f.title, explanation=f.explanation, suggested_fix=f.suggested_fix,
+            title=clean_title(f.title), explanation=f.explanation, suggested_fix=f.suggested_fix,
             mismatches=f.mismatches, can_regenerate=can_regenerate,
         ))
     return out

@@ -63,7 +63,7 @@ def parse_json(text: str) -> Any:
 def _create(model: str, parts: list[dict], *, schema: Optional[Type[BaseModel]], previous: Optional[str],
             thinking: str, max_output_tokens: Optional[int]):
     kwargs: dict = {"model": model, "input": parts}
-    gen: dict = {"thinking_level": thinking}
+    gen: dict = {"thinking_level": thinking, "temperature": 0.2}
     if max_output_tokens:
         gen["max_output_tokens"] = max_output_tokens
     kwargs["generation_config"] = gen
@@ -112,7 +112,7 @@ async def generate(model: str, parts: list[dict], timeout: float | None = None, 
     if timeout is None:
         return await asyncio.to_thread(generate_sync, model, parts, **kwargs)
     last: Exception | None = None
-    for _ in range(2):
+    for _ in range(3):
         try:
             return await asyncio.wait_for(asyncio.to_thread(generate_sync, model, parts, retries=0, **kwargs), timeout)
         except Exception as exc:
